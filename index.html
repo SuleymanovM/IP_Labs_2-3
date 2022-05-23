@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	
+	<title>Сулейманов Мухтар</title>
+	
+     
+
+	<link href="https://fonts.google.com/specimen/Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+	
+	
+	<script src="jquery-3.6.0.js"></script>
+	<script type="text/javascript" src="gallary.js"></script>
+	
+
+
+
+	<style>
+   li {
+    list-style-type: none; 
+   }</style>
+   
+
+</head>
+<body>
+	
+	<header id="header" class="header"> 
+
+		<div class="container position  "> 
+			<div class="header-box">
+				<div class="menu-box">
+				
+
+				<ul class="menu">
+					<li><a href="#section-1" class="link">Обо мне</a></li>
+					<li><a href="#section-2" class="link">Спорт</a></li>
+					<li><a href="#section-3" class="link">Галерея</a></li>
+					<li><a href="#footer" class="link">Контакты</a></li>	
+				</ul>
+
+			    </div>
+
+			    <div class="intr">
+				
+				  <div class="name">Мухтар Сулейманов</div>
+			      <div class="welcome">
+				  Добро пожаловать на мой сайт, здесь я немного расскажу о своей жизни.
+			      </div>
+			      
+
+		        </div>
+
+			</div>
+		<div class="header-img"></div>
+		</div>
+	</header>
+
+    <section  class="section-1" id="section-1">
+		<div class="container position">
+			<div class="about-img"></div>
+			<div class="about-box">
+				<div class ="abouttxt-1">Обо мне</div>
+				<div class="abouttxt-2">Меня зовут Мухтар Сулейманов, мне 19 лет. На данный момент, я являюсь студентом Ульяновского Государственного Технического Университета, обучаюсь на первом курсе. Из интересов, можно отметить, активное увлечение спортом. </div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section-2" id="section-2">
+		<div class="container position">
+			
+			<div class="text-box-1">Спорт является важной частью моей жизни. Заниматься борьбой я начал с одинадцати лет. Благодаря соревнованиям, мне удалось объездить множество городов России. На данный момент я имею звание КМС России. </div>
+			<div class="about-img1"></div>
+			<div class="sport"></div>
+		</div>
+	</section>
+
+	<section class="section-3" id="section-3">
+		<div class="container position">
+				<div class="main_gallary">
+					<div class="buttonGallary" onclick="leftChangeImage()"><img src="img/nextl.png"></div>
+					<div id ="mainImage">
+						
+					</div>
+					
+					<div class="buttonGallary" onclick="rightChangeImage()"><img src="img/nextr.png"></div>
+				</div>
+				<div class="textwbtn">
+					<div class="text-box-2">Здесь немного фотографий из моей жизни. Можно увидеть фотографии с отдыха, выпускного и просто фото с семьей.</div>
+					
+				</div>
+			
+			
+			
+		</div>
+	</section>
+
+
+	
+
+
+	
+	<footer id="footer">
+		<div class="container position">
+			<div class="social-box">
+				<div class="more-me">Мои контакты</div>
+				<ul class="social">
+					<li><a href="https://vk.com/id256630342" target="_blank">VK</a></li>
+					<li><a href="https://www.instagram.com/p/CHCskbnF6Pt/?igshid=MDJmNzVkMjY=" target="_blank">Instagram</a></li>
+				</ul>
+			</div>
+			<div class="phone">Номер телефона: + 7 906 141 60 71</div>
+		</div>
+	</footer>
+
+
+<script type="text/javascript">
+		$(document).ready(function() {
+			$("a.link").click(function(){
+				$("html, body").animate({
+					scrollTop: $($(this).attr("href")).offset().top + "px"
+				}, {
+					duration: 1000,
+					easing: "swing"
+				});
+				return false;
+			});
+		});
+	</script>
+
+
+</body>
+</html>
+

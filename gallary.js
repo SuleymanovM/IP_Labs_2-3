@@ -1,0 +1,64 @@
+let numberImage = 1;
+const countImage = 3;
+const pathImages = "img/gallary/";
+const countDiv = 30;
+const speed = 50;
+
+function generateImage(){
+	let widthDiv = 600/countDiv;
+	let image = pathImages+"0"+numberImage+".jpg";
+	
+	for (let i=0; i<countDiv; i++){
+
+		let item = $("<div></div>");
+		item.addClass("elementImage");
+
+		item.css("width",widthDiv+"px");
+		item.css("background-image",'url('+image+')');
+		item.css("background-position-x", - i*widthDiv+"px");
+		$( "#mainImage" ).append(item);
+	}
+
+}
+
+function changeImage() {
+
+    let image = pathImages + "0" + numberImage + ".jpg";
+    let i = 1;
+    let j = 1;
+
+    $("#mainImage div").each(function () {
+
+        $(this).slideUp(speed * i, function () {
+            $(this).css("background-image", 'url('+image+')');
+            $(this).slideDown(speed * i);
+        });
+        i++;
+    });
+
+}
+
+
+
+
+function leftChangeImage() {
+	if(numberImage > 1)
+		numberImage--;
+	else
+		numberImage = countImage;
+	changeImage()
+}
+
+
+
+function rightChangeImage() {
+	if (numberImage < countImage)
+		numberImage++;
+	else
+		numberImage = 1;
+	changeImage()
+}
+
+$( document ).ready(function(){
+	generateImage();
+});
